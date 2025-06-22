@@ -62,7 +62,8 @@ export class AuthService {
     
       await this.mailerService.sendActivationLink(payload.email, token);
       return {
-        message:"Emailni tasdiqlsh uchun link yuborildi."
+        message:"Emailni tasdiqlsh uchun link yuborildi.",
+        token:token
       }
    }
 

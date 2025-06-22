@@ -7,7 +7,6 @@ export class MailerService {
 
   async sendActivationLink(email: string, token: string) {
     const url = `https://kirish-markazi-backend.onrender.com/auth/activate/${token}`; // frontend yo'nalish bo'lsa, shuni yozasiz
-
     await this.mailerService.sendMail({
       to: email,
       subject: "Ro'yxatdan o'tishni tasdiqlang",
