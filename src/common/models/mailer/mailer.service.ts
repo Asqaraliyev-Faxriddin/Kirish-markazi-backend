@@ -6,7 +6,7 @@ export class MailerService {
   constructor(private readonly mailerService: NestMailerService) {}
 
   async sendActivationLink(email: string, token: string) {
-    const url = `http://localhost:3000/auth/activate/${token}`; // frontend yo'nalish bo'lsa, shuni yozasiz
+    const url = `https://kirish-markazi-backend.onrender.com/auth/activate/${token}`; // frontend yo'nalish bo'lsa, shuni yozasiz
 
     await this.mailerService.sendMail({
       to: email,

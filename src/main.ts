@@ -10,14 +10,16 @@ async function bootstrap() {
     whitelist:true,
     forbidNonWhitelisted:true
   }))
-  const port = process.env.PORT || 3000;
+  const port = process.env.PORT || 5000;
   app.enableCors();
   await app.listen(port, async () => {
     console.log("🚀 Server is runnning");
 
     // Admin yaratish
     await createSuperAdmin();
+    
   });
+  
 
 }
 bootstrap();
