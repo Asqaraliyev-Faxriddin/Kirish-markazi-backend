@@ -29,7 +29,6 @@ import { MailerModule } from './common/models/mailer/mailer.module';
         models:[User],
 
 
-
       }),
       
     }),

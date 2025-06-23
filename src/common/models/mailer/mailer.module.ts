@@ -2,8 +2,8 @@ import { Global, Module } from '@nestjs/common';
 import { MailerModule as NestMalierModule } from '@nestjs-modules/mailer';
 import { join } from 'path';
 import {HandlebarsAdapter} from "@nestjs-modules/mailer/dist/adapters/handlebars.adapter"
-import { strict } from 'assert';
 import { MailerService } from './mailer.service';
+
 @Global()
 @Module({
   imports:[
@@ -34,3 +34,4 @@ exports:[MailerService]
 
 })
 export class MailerModule {}
+ 

@@ -21,21 +21,21 @@ export class UserController {
   }
 
   @UseGuards(AuthGuard)
-  @Roles(UserRole.Admin)
+  @Roles(UserRole.SuperAdmin)
   @Get('user/:id')
   getUserById(@Param('id', ParseIntPipe) id: number): Promise<User> {
     return this.userService.getUserById(id);
   }
 
   @UseGuards(AuthGuard)
-  @Roles(UserRole.Admin)
+  @Roles(UserRole.SuperAdmin)
   @Put('user/update/:id')
   updateUser(@Param('id', ParseIntPipe) id: number,@Body() dto: Partial<User>,): Promise<User> {
     return this.userService.updateUser(id, dto);
   }
 
   @UseGuards(AuthGuard)
-  @Roles(UserRole.Admin)
+  @Roles(UserRole.SuperAdmin)
   @Delete('user/delete/:id')
   deleteUser(@Param('id', ParseIntPipe) id: number): Promise<string> {
     return this.userService.deleteUser(id);
